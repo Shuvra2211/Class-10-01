@@ -1,0 +1,383 @@
+/* common css start */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+img{
+    display: inline-block;
+    /* padding: 25px; */
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+.info h2{
+    color: #02918c;
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-top: 98px;
+}
+
+.info p{
+    color: #7e8287;
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+.info p b{
+   font-size: 23px;
+    font-weight: 800;
+}
+.aling-center{
+    align-items: center;
+}
+
+/* common css end */
+
+/* nav section css start */
+nav{
+    background-color: #02918c;
+    text-align: justify;
+}
+
+nav div.row{
+    align-items: center;
+}
+
+nav .logo{
+    width: 15%;
+}
+
+nav div.menu{
+    width: 75%;
+}
+
+nav div .menu ul{
+    justify-content: flex-end;
+}
+
+nav .menu ul li a{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    padding: 26px 25px;
+    display: inline-block;
+    transition: 0.8s;
+    position: relative;
+    z-index: 1;
+}
+
+nav .menu ul li a::after{
+      content: '';
+      width: 0;
+      height: 100%;
+      background-color: red;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.67s;
+      z-index: -1;
+      transform: scale(0) rotate(60deg);
+      transform-origin: bottom;
+
+}
+
+
+nav .menu ul li a:hover::after,
+nav .menu ul li a.active::after{
+    width: 100%;
+    background: blue;
+    transform: scale(1) rotate(0);
+    /* color: black; */
+}
+/* nav section css end */
+
+/* bannar section css start */
+
+#banner{
+    background-image: url(../img/bannar_bg.jpg);
+    background-size: cover;
+    height: 728px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#banner::before{
+    content: '';
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.8;
+
+}
+
+#banner .container{
+    margin: auto;
+}
+
+#banner img{
+    display: block;
+    margin: 52px auto;
+}
+
+#banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+}
+
+#banner h1{
+    font-size: 68px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+}
+
+#banner p{
+    font-size: 18px;
+    color: white;
+}
+
+#banner a{
+    font-size: 14px;
+    font-weight: 800;
+    color: #0b1016;
+    letter-spacing: 2px;
+    background-color: #cfc91d;
+    padding: 19px 42px;
+    text-transform: uppercase;
+}
+
+/* banner section css end */
+
+/* about section css start */
+#about{
+    text-align: center;
+}
+#about .info p{
+    width: 900px;
+}
+
+#about .about_child{
+    width: 25%;
+    border-right: 2px solid #7e8287;
+     padding: 50px 60px;
+     margin: 80px 0;
+}
+
+#about .about_child:last-child{
+    border: none;
+}
+
+
+#about .about_child .tittle{
+    font-size: 16px;
+    font-weight: 800;
+    color: #7e8287;
+    margin: 28px 0;
+}
+
+#about .about_child .p1{
+    font-size: 11px;
+    color: #7e8287;
+    margin: auto;
+}
+/* about section css end */
+
+/* service section css start */
+#service{
+    background-image: url(../img/service_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#service .inner_container{
+    width: 50%;
+}
+
+#service .inner_container p{
+    line-height: 20px;
+}
+
+#service .service_child{
+    width: 50%;
+    padding-bottom: 60px;
+}
+#service .info .p3{
+    margin-bottom: 55px;
+}
+#service .service_child h5{
+    font-size: 16px;
+    font-weight: 800;
+    color: #7e8287;
+    margin: 15px 0;
+}
+#service .service_child .p2{
+    /* width: 164px; */
+    font-size: 11px;
+    color: #7e8287;
+    padding-right: 100px;
+    
+}
+
+
+/* service section css end */
+
+/* my work,contact  section css start */
+#mywork .my_work h2,
+#mywork .my_work p,
+#contact .contact_item h2,
+#contact .contact_item p{
+    text-align: center;
+}
+#mywork .my_work .p4,
+#contact .contact_item .p5{
+    width: 680px;
+    line-height: 30px;
+    margin-bottom: 82px;
+}
+
+#mywork .mywork_child{
+     width: 25%;
+     position: relative;
+}
+
+#mywork .mywork_child img{
+    width: 100%;
+   display: block;
+}
+
+#mywork .mywork_child .overlay{
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    top: 20px;
+    bottom: 20px;
+    background-color: rgba(2,145,140,0.85);
+    /* padding: 110px 80px; */
+    text-align: center;
+    transition: 0.68s;
+     border-radius: 50%;
+    transform: scale(0) rotate(50deg);
+    transform-origin: left top;
+}
+
+
+#mywork .mywork_child .overlay .row{
+    height: 100%;
+}
+
+
+#mywork .mywork_child .overlay .cnt{
+    width: 100%;
+}
+
+#mywork .mywork_child .overlay .img_overlay{
+    color: #ffffff;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#mywork .mywork_child .overlay .size{
+    color: #ffffff;
+    font-size: 13px;
+    width: 195px;
+    margin: auto;
+}
+
+#mywork .mywork_child:hover .overlay{
+        border-radius: 0;
+        transform: scale(1) rotate(0);
+}
+
+
+#contact .contact_form{
+    background-color: #0b0b0b ;
+    /* height: 564px; */
+    padding: 60px 0;
+}
+
+#contact .contact_form input,
+#contact .contact_form textarea{
+    display: block;
+    margin: 0 auto;
+    background: none;
+    padding: 18px 0;
+   margin-bottom: 52px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #7e8287;
+    width: 640px;
+}
+
+#contact .contact_form input::placeholder,
+#contact .contact_form textarea::placeholder{
+    text-transform: uppercase;
+    color: #7e8287;
+}
+
+#contact .contact_form input.large,
+#contact .contact_form textarea.large{
+    width: 920px;
+}
+
+#contact .contact_form textarea{
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#contact .contact_form button{
+    background-color: #cfc91d;
+    padding: 19px 64px;
+    display: block;
+    margin: 0 auto;
+    color: #0b1016;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* my work,contact section css end */
+
+
+/* last section css start */
+#last p{
+    background-color: #000000;
+    color: #7e8287;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 35px 0;
+}
+
+/* last section css end */
+
+
